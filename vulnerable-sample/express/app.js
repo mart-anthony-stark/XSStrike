@@ -17,12 +17,12 @@ app.use(express.json());
 // });
 
 app.get("/", (req, res) => {
-  res.render("register");
+  res.render("register", { firstname: "" });
 });
 
 app.post("/", (req, res) => {
   console.log(req.body);
-  res.render("register");
+  res.render("register", { ...req.body });
 });
 
 app.listen(3000, () => {
