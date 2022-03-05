@@ -12,86 +12,91 @@
 
 <body>
     <div id="root">
-        <form action="Salazar_IT2C_ASYNC_B.php" method="POST">
+        <form action="/" method="POST">
             <span id="icon">
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
             </span>
+            <%= firstname %>
+                <div class="gap-4">
+                    <div class="col-1">
+                        <h3>Personal details</h3>
+                        <div class="two-cols">
+                            <div class='field'>
+                                <span class="iconify" data-icon="ant-design:user-outlined"></span>
+                                <input type='text' name="firstname" placeholder='First name' value=<% if(firstname){ %>
+                                <%= firstname %>
+                                    <% } else{ %>
+                                        ""
+                                        <% } %>/>
 
-            <div class="two-cols gap-4">
-                <div class="col-1">
-                    <h3>Personal details</h3>
-                    <div class="two-cols">
-                        <div class='field'>
-                            <span class="iconify" data-icon="ant-design:user-outlined"></span>
-                            <input type='text' name="firstname" placeholder='First name' value="" />
-                        </div>
-                        <div class='field'>
-                            <span class="iconify" data-icon="ant-design:user-outlined"></span>
-                            <input type='text' name="lastname" placeholder='Last name' value="" />
-                        </div>
-                    </div>
-
-                    <div class="two-cols">
-                        <div class='field'>
-                            <span class="iconify" data-icon="akar-icons:location"></span>
-                            <input type='text' name="birthplace" placeholder='Birthplace' value="" />
-                        </div>
-                        <div class='field'>
-                            <span class="iconify" data-icon="cil:birthday-cake"></span>
-                            <input type='date' name="dob" placeholder='Date of Birth' value="" />
-                        </div>
-                    </div>
-
-                    <div class="two-cols">
-                        <div class='field'>
-                            <span class="iconify" data-icon="el:home-alt"></span>
-                            <input type='text' name="address" placeholder='Address' value="" />
-                        </div>
-                        <div class='field sex'>
-                            <div class="sex-icon">
-                                <div id="male-icon" class="shown">
-                                    <span class='iconify' data-icon='el:male'></span>
-                                </div>
-                                <div id="female-icon" class="hidden">
-                                    <span class='iconify' data-icon='el:female'></span>
-                                </div>
                             </div>
-                            <select name="sex" id="sex">
-                                <option> value="male">Male</option>
-                                <option> value="female">Female</option>
-                            </select>
+                            <div class='field'>
+                                <span class="iconify" data-icon="ant-design:user-outlined"></span>
+                                <input type='text' name="lastname" placeholder='Last name' value="" />
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="two-cols">
-                        <!-- Email -->
-                        <div class='field'>
-                            <span class="iconify" data-icon="dashicons:email"></span>
-                            <input type='text' name="email" placeholder='Email' value="" />
+                        <div class="two-cols">
+                            <div class='field'>
+                                <span class="iconify" data-icon="akar-icons:location"></span>
+                                <input type='text' name="birthplace" placeholder='Birthplace' value="" />
+                            </div>
+                            <div class='field'>
+                                <span class="iconify" data-icon="cil:birthday-cake"></span>
+                                <input type='date' name="dob" placeholder='Date of Birth' value="" />
+                            </div>
                         </div>
-                        <!-- Contact Number -->
-                        <div class='field'>
-                            <span class="iconify" data-icon="akar-icons:phone"></span>
-                            <input type='text' name="contact" placeholder='Contact Number' value="" />
-                        </div>
-                    </div>
 
-                    <div class="two-cols">
-                        <div class='field'>
-                            <span class="iconify" data-icon="clarity:flag-line"></span>
-                            <input type='text' name="nationality" placeholder='Nationality' value="" />
+                        <div class="two-cols">
+                            <div class='field'>
+                                <span class="iconify" data-icon="el:home-alt"></span>
+                                <input type='text' name="address" placeholder='Address' value="" />
+                            </div>
+                            <div class='field sex'>
+                                <div class="sex-icon">
+                                    <div id="male-icon" class="shown">
+                                        <span class='iconify' data-icon='el:male'></span>
+                                    </div>
+                                    <div id="female-icon" class="hidden">
+                                        <span class='iconify' data-icon='el:female'></span>
+                                    </div>
+                                </div>
+                                <select name="sex" id="sex">
+                                    <option> value="male">Male</option>
+                                    <option> value="female">Female</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class='field'>
-                            <span class="iconify" data-icon="bx:church"></span>
-                            <input type='text' name="religion" placeholder='Religion' value="" />
+
+                        <div class="two-cols">
+                            <!-- Email -->
+                            <div class='field'>
+                                <span class="iconify" data-icon="dashicons:email"></span>
+                                <input type='text' name="email" placeholder='Email' value="" />
+                            </div>
+                            <!-- Contact Number -->
+                            <div class='field'>
+                                <span class="iconify" data-icon="akar-icons:phone"></span>
+                                <input type='text' name="contact" placeholder='Contact Number' value="" />
+                            </div>
+                        </div>
+
+                        <div class="two-cols">
+                            <div class='field'>
+                                <span class="iconify" data-icon="clarity:flag-line"></span>
+                                <input type='text' name="nationality" placeholder='Nationality' value="" />
+                            </div>
+                            <div class='field'>
+                                <span class="iconify" data-icon="bx:church"></span>
+                                <input type='text' name="religion" placeholder='Religion' value="" />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
-            <input type="submit" name="signup" value="Signup" />
-            <h4>Already have an account? <span>Login</span></h4>
+                <input type="submit" name="signup" value="Signup" />
+                <h4>Already have an account? <span>Login</span></h4>
         </form>
     </div>
     <img id='right' src="./assets/flat.svg" alt="asd">
