@@ -130,3 +130,4 @@ The WAF signatures in `/db/wafSignatures.json` are taken & modified from [sqlmap
 
 - GET = python xsstrike.py -u "https://public-firing-range.appspot.com/reflected/parameter/body?q=a"
 - crawl = python xsstrike.py -u "http://public-firing-range.appspot.com/reflected/" --crawl -l 10
+- site = https://xss-quiz.int21h.jp/?sid=365
