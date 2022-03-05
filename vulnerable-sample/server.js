@@ -1,8 +1,8 @@
 const unnamed = require("unnamed-js");
 
-const server = unnamed({ port: 3000 });
+const { GET } = unnamed({ port: 3000 });
 
-server.GET("/", (req, res) => {
+GET("/", (req, res) => {
   const response =
     req.query && req.query.hasOwnProperty("name")
       ? `<html><body>Hello</body><input value="${req.query.name}"/></html>`
